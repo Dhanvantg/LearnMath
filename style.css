@@ -1,0 +1,260 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  font-family: "Segoe UI", sans-serif;
+  background: url(bg.png)no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+input{
+  position: relative;
+  left: -18%;
+  width: 120%;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+label{
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 3px;
+  line-height: 60px;
+}
+
+select{
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  height: 25px;
+  font-size: 18px;
+}
+
+
+#bsend{
+  position: relative;
+  width: 70%;
+  height: 50px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  background-color: rgb(26, 182, 33);
+  font-weight: 650;
+  font-size: 23px;
+  margin: 15px;
+}
+
+#bcan{
+  width: 31%;
+  height: 30px;
+  text-transform: uppercase;
+  background-color: rgb(216, 23, 23);
+  font-weight: 650;
+  font-size: 17px;
+}
+
+#plus {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 15%;
+}
+#minus {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  width: 15%;
+}
+#cross {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 15%;
+}
+#division {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  width: 15%;
+}
+#equal {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  width: 15%;
+}
+
+.main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main h2{
+  z-index: 1;
+  position: absolute;
+  top: -80%;
+  left: -40%;
+  color: #fff;
+  text-shadow: 0 0 20px #000, 0 0 30px #000;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 20px;
+  line-height: 60px;
+}
+
+.container img{
+  position: absolute;
+  max-width: 10%;
+  height: auto;
+}
+
+.container h2{
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 32px;
+  line-height: 60px;
+}
+#where{
+  z-index: 1;
+  position: relative;
+  top: 25%;
+  left: -10%;
+  color: #fff;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 15px;
+  line-height: 60px;
+}
+
+#prac{
+  z-index: 1;
+  position: relative;
+  top: -4.3rem;
+  left: 35%;
+  color: rgb(231, 255, 97);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-size: 90px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 20px;
+  line-height: 60px;
+}
+#met{
+  z-index: 1;
+  position: relative;
+  top: 40%;
+  left: -17.5%;
+  color: #fff;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 15px;
+  line-height: 60px;
+}
+
+#perf{
+  z-index: 1;
+  position: relative;
+  top: -4.3rem;
+  left: 31%;
+  color: rgb(238, 179, 16);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  font-size: 95px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 25px;
+  line-height: 60px;
+}
+
+#ready{
+  position: absolute;
+  top: 70%;
+  left: 43%;
+  width: 15%;
+  height: 37px;
+  text-transform: uppercase;
+  background-color: rgb(255, 255, 255);
+  font-weight: 650;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.container h2 span{
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 10px;
+}
+
+.btn-posnawr {
+  color: #f0b514;
+  position: relative;
+  top: 60%;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 8px;
+  margin: 1rem auto;
+  font: normal 22px/60px 'proxima-nova', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #f0b514;
+}
+.btn-posnawr span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #f0b514;
+  -webkit-transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.btn-posnawr:hover {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 25px;
+}
+.btn-posnawr:hover span {
+  width: 225%;
+  height: 562.5px;
+}
+.btn-posnawr:active {
+  background-color: #f0c814;
+}
+
+@media (max-width:800px){
+  .container h2{
+    font-size: 60px;
+    letter-spacing: 19px;
+    line-height: 35px;
+  }
+
+  .container h2 span{
+    font-size: 26px;
+  }
+}

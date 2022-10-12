@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Math</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel = "icon" href = "img/logob.png" type = "image/x-icon">
+</head>
+<body style="overflow: hidden;">
+    <img src="img/plus.png" class="object" data-value="-6" alt="" id="plus">
+    <img src="img/minus.png" class="object" data-value="5" alt="" id="minus">
+    <img src="img/cross.png" class="object" data-value="-3" alt="" id="cross">
+    <img src="img/division.png" class="object" data-value="8" alt="" id="division">
+    <img src="img/equal.png" class="object" data-value="2" alt="" id="equal">
+    <div class="navbar" style="width:auto; height: 5rem; background-color:black; border-radius: 1.3rem;">
+        <img src="img/logo.png" class="object" style="transform: translateX(0px) translateY(0px); position: absolute; size: auto; width: 3.5%; left: 0%; height: 7.5%; top: 7px;">
+    <h3 class="bro" style="font-weight: 700; font-size: 55px; position: relative; left: 42%; top: 1px; color: #fff;">LEARNMATH</h3>
+    </div>
+    <div class="main">
+    <div class="container">
+        <br><p id="where">WHERE</p>  <p id="prac">PRACTICE</p> <p id="met">MEETS</p> <p id="perf">PERFECTION</p>
+    </div>
+    <a class="btn-posnawr" href="login.php">LOGIN<span></span></a>
+    <a class="btn-posnawr" href="dump.php">SIGNUP<span></span></a>
+
+<script>
+    (function() {
+        const buttons = document.querySelectorAll(".btn-posnawr");
+
+        buttons.forEach(button => {
+            ["mouseenter", "mouseout"].forEach(evt => {
+            button.addEventListener(evt, e => {
+                let parentOffset = button.getBoundingClientRect(),
+                    relX = e.pageX - parentOffset.left,
+                    relY = e.pageY - parentOffset.top;
+
+                const span = button.getElementsByTagName("span");
+
+                span[0].style.top = relY + "px";
+                span[0].style.left = relX + "px";
+            });
+            });
+        });
+        })();
+</script>
+<script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+    document.querySelectorAll(".object").forEach(function(move){
+  
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 200;
+        var y = (e.clientY * moving_value) / 200;
+  
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+        });
+      }
+    </script>
+</body>
+</html>
